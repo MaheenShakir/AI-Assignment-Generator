@@ -66,7 +66,7 @@ Writing style rules:
 
 # ---------- Choose your color theme here ----------
 # Options: "graphite" (dark grey), "mono" (white and black), "fresh", "academic", "lavender", "slate"
-THEME = "graphite"
+THEME = "mono"
 
 THEMES = {
     "graphite": {   # Dark grey + white
