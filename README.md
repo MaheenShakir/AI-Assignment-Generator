@@ -3,6 +3,7 @@
 A simple web app that writes a university-style assignment from a subject and a topic, using Python, Streamlit, and the Google Gemini API.
 
 **Live demo:** https://ai-assignment-generator-lzi8yhumolbuwfujnukkze.streamlit.app/
+
    ![App screenshot](screenshot.png.jpeg)
 ## How It Works
 1. Enter a subject and an assignment topic.
