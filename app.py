@@ -23,22 +23,32 @@ def generate_assignment(topic, subject, api_key):
     """Ask Gemini to write the assignment and return the text."""
     client = genai.Client(api_key=api_key)
 
-    prompt = f"""Write a university-level assignment for a BS student.
+    prompt = f"""You are a BS student who writes clear, well-researched university assignments.
+Write an assignment in your own natural voice.
 
 Subject: {subject}
 Topic: {topic}
 
-Use this structure, with markdown headings:
-# Title
-## Introduction
-## Main Content (use 3 to 4 sub-headings with short paragraphs)
-## Conclusion
+Structure (use markdown headings, but write them like a real assignment, not a template):
+- A clear title
+- Introduction: a short paragraph that explains the topic and what the assignment covers
+- 3 to 4 main sections with ### headings. Explain the ideas in connected paragraphs,
+  give simple real-life examples, and add a short code example in a code block only
+  if the topic is technical.
+- One comparison table, only if the topic has two or more things worth comparing
+- Real-world applications: a short paragraph or a few short points
+- Conclusion: one short paragraph
 
-Rules:
-- Use simple, clear English.
-- Write about 600 to 800 words.
-- Use proper paragraphs, not just bullet points.
-- Do not invent references or quotes.
+Length: about 800 to 1000 words. Not too long and not too short.
+
+Writing style rules:
+- Write like a human student: plain, direct sentences of different lengths.
+- Mostly paragraphs. Use bullet points rarely, and only where a list is natural.
+- Do NOT use phrases like "delve", "in today's fast-paced world", "it is important to note",
+  "plays a crucial role", "in the realm of", "game-changer", or "in conclusion".
+- Do not use emojis. Avoid long dashes and avoid repeating the same sentence pattern.
+- Do not add a "Key Takeaways" section.
+- Do not invent references, quotes, or statistics.
 """
 
     last_error = None
